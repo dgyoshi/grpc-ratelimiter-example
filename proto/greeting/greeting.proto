@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package greeting;
+
+service Greeting {
+    rpc Hello (Msg) returns (Reply);
+}
+
+message Msg {
+    string name = 1;
+    string msg = 2;
+}
+
+message Reply {
+    string msg = 1; 
+}
+
